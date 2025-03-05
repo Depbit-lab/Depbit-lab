@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="600" viewBox="0 0 600 600"
+     version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <title>DEPBIT Futuristic Logo (Square)</title>
+  
+  <!-- Definiciones: gradiente y filtro para el glow -->
+  <defs>
+    <!-- Gradiente lineal (cian -> purpura) -->
+    <linearGradient id="gradientFuturistic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#BF00FF"/>
+    </linearGradient>
+    
+    <!-- Filtro para el brillo exterior (glow) -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Difuminado para crear el halo -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blurOut"/>
+      <!-- Combinar el difuminado con la imagen original -->
+      <feBlend in="SourceGraphic" in2="blurOut" mode="screen"/>
+    </filter>
+    
+    <!-- Tipografia Orbitron (opcional).
+         Debes escapar el & como &amp; para que sea XML válido.
+    -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Fondo oscuro -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#0D0D0D"/>
+  
+  <!-- Texto "DEPBIT" con gradiente y efecto glow -->
+  <text
+    x="50%" y="50%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="url(#gradientFuturistic)"
+    font-family="'Orbitron', sans-serif"
+    font-size="120"
+    font-weight="600"
+    letter-spacing="0.1em"
+    filter="url(#neonGlow)"
+  >
+    DEPBIT
+  </text>
+
+  <!-- Lineas futuristas de adorno -->
+  <line x1="100" y1="550" x2="250" y2="400"
+        stroke="#00FFFF" stroke-opacity="0.25" stroke-width="2"/>
+  <line x1="500" y1="100" x2="350" y2="250"
+        stroke="#BF00FF" stroke-opacity="0.25" stroke-width="2"/>
+</svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1500"
+  height="500"
+  viewBox="0 0 1500 500"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>DEPBIT Twitter Banner</title>
+  
+  <!-- Definiciones: gradiente y filtro para efecto glow -->
+  <defs>
+    <!-- Gradiente lineal (cian a purpura) -->
+    <linearGradient id="gradientFuturistic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFFF"/>
+      <stop offset="100%" stop-color="#BF00FF"/>
+    </linearGradient>
+    
+    <!-- Filtro para el brillo exterior (glow) -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blurOut"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="screen"/>
+    </filter>
+    
+    <!-- Tipografia Orbitron (reemplazar & por &amp; en la URL) -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Fondo oscuro -->
+  <rect x="0" y="0" width="1500" height="500" fill="#0D0D0D"/>
+  
+  <!-- Elementos decorativos futuristas -->
+  <!-- Linea diagonal esquina inferior izquierda -->
+  <line
+    x1="50" y1="450"
+    x2="250" y2="250"
+    stroke="url(#gradientFuturistic)"
+    stroke-width="2"
+    stroke-opacity="0.3"
+  />
+  <!-- Linea diagonal esquina superior derecha -->
+  <line
+    x1="1250" y1="50"
+    x2="1450" y2="250"
+    stroke="url(#gradientFuturistic)"
+    stroke-width="2"
+    stroke-opacity="0.3"
+  />
+  
+  <!-- Anillo futurista (opcional) -->
+  <circle
+    cx="750" cy="250" r="180"
+    stroke="url(#gradientFuturistic)"
+    stroke-width="2"
+    stroke-opacity="0.15"
+    fill="none"
+  />
+  
+  <!-- Texto principal: DEPBIT -->
+  <text
+    x="50%" y="50%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="url(#gradientFuturistic)"
+    font-family="'Orbitron', sans-serif"
+    font-size="100"
+    font-weight="600"
+    filter="url(#neonGlow)"
+  >
+    DEPBIT
+  </text>
+  
+  <!-- Texto secundario: "Futuro Digital. Ingenieria Electronica y Bitcoin." -->
+  <text
+    x="50%" y="65%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="#FFFFFF"
+    font-family="'Orbitron', sans-serif"
+    font-size="32"
+    font-weight="400"
+    opacity="0.8"
+  >
+    Futuro Digital. Ingenieria Electronica y Bitcoin.
+  </text>
+  
+</svg>
